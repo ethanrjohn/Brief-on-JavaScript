@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements in JavaScript</title>
+</head>
+<body>
+    <h1>
+        Conditional Statements in JavaScript
+    </h1>
+    <button type="button" onclick="myfunction()">
+        Clique Me
+    </button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        function myfunction(){
+            var greeting;
+            var time=new Date().getHours();
+            if (time<12){
+                greeting="Good Morning";
+            }
+            else if (time < 17) {
+                greeting = "Good Afternoon";
+            }
+            else if (time < 20) {
+                greeting = "Good Evening";
+            }
+            else {
+                greeting = "Good Night";
+            }
+            document.getElementById("p1").innerHTML=time;
+            document.getElementById("p2").innerHTML = greeting;
+        }
+    </script>
+</body>
+</html>
